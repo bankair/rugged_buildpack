@@ -53,7 +53,7 @@ if [ -d "$BUILD_CACHE_DIR/icu" ]; then
 fi
 
 if [ ! -x "$VENDOR_DIR/bin/uconv" ]; then
-    topic "no icu build found. Downoading source."
+    topic "no icu build found. Downloading source."
     curl 'https://github.com/unicode-org/icu/releases/download/release-72-1/icu4c-72_1-src.tgz' -L -s -o - | tar -xz -C "$BUILD_DIR"
     cd "$BUILD_DIR/icu/source"
 
